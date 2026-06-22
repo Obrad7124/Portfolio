@@ -1,0 +1,388 @@
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        } 
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        :root {
+            --dark-color: rgba(33, 37, 41);
+            --underline-color: #38bdf8;
+            --border-text-color: #bcc2ca;
+            --background-color: #e5ebf1;
+            --shadow-color: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        /* --- NAVIGACIJA --- */
+
+        .navigacija{
+            background-color: rgba(33, 37, 41, 0.9) !important;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--underline-color);
+        }
+
+        /* --- SEKCIJE --- */
+        section {
+            padding: 6rem 2rem 4rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            color: #f8fafc;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 4px;
+            background-color: var(--underline-color);
+            margin: 15px auto 50px auto;
+            border-radius: 2px;
+        }
+
+        /* --- HERO SEKCIJA --- */
+
+        #hero {
+            position: relative;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        #hero p{
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: #94a3b8;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url(../Slike/computer-programming-1200x800.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(9px);
+            transform: scale(1.08);
+            z-index: 0;
+        }
+
+         #hero .hero-content {
+            position: relative;
+            z-index: 2; 
+            color: #ffffff;
+            text-align: center;
+        } 
+
+        #hero h1 {
+            font-size: 3.5rem;
+            color: #9c9c9c;
+            line-height: 1.2;
+        }
+
+        #hero h1 span {
+            color: #38bdf8;
+        }
+
+        #hero h2 {
+            font-size: 1.8rem;
+            color: #94a3b8;
+            margin: 1rem 0 2rem 0;
+            font-weight: 400;
+        }
+
+        /* --- O MENI --- */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-card {
+            background-color: #1e293b;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        #slika img{
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-color);
+            height: 300px;
+            object-fit: cover;
+        }
+
+        #Omenitekst{
+            box-shadow: var(--shadow-color);
+            border-radius: 10px;
+            padding: 25px;
+            background-color: var(--border-text-color);
+            width: 60%;
+        }
+
+        /* --- EDUKACIJA --- */
+
+        #education{
+            background-color: var(--background-color);
+        }
+
+        .education-item:hover{
+            transform: translateY(-15px);
+            transition-duration: 0.6s;
+        }
+
+        .education-item{
+            background-color: var(--border-text-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-color);
+            transition-duration: 0.6s;
+        }
+
+        .education-item img{
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-color);
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* --- VEŠTINE --- */
+
+        .skill-card i{
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-card:hover{
+            transform: translateY(-15px);
+            transition-duration: 0.6s;
+        }
+
+        .skill-card{
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-color);
+            transition-duration: 0.6s;
+        }
+
+        /* --- PROJEKTI --- */
+
+        #projects {
+            background-color: var(--background-color);
+        }
+
+        #projects p{
+            color:#94a3b8;
+            font-size: 0.95rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: #1e293b;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            box-shadow: var(--shadow-color);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.8rem;
+            border-radius: 4px;
+        }
+
+        /* --- KONTAKT --- */
+        .contact-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            gap: 50px;
+        }
+
+        .contact-info {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-color);
+            flex: 0 0 35%;
+            min-width: 0;
+        }
+
+        .contact-info p {
+            padding: 0.5rem 0;
+        }
+
+        .contact-form{
+            box-shadow: var(--shadow-color);
+            flex: 1 1 65%;
+            min-width: 0;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* --- RESPONSIVE --- */
+
+        @media (min-width: 993px) {
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .education-grid{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 577px) and (max-width: 992px) {
+
+            .about-content { 
+                flex-direction: column;
+                text-align: center;
+             }
+            #hero h1 {
+                 font-size: 2.5rem;
+            }
+
+            #hero h2 {
+                font-size: 1.35rem;
+            }
+
+            #hero p {
+                font-size: 0.95rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .education-grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-container {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1.5rem;
+            }
+
+            .contact-info,
+            .contact-form {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+             .about-content { 
+                flex-direction: column;
+                text-align: center;
+             }
+            #hero h1 {
+                 font-size: 2rem;
+            }
+
+            #hero h2 {
+                font-size: 1.05rem;
+            }
+
+            #hero p {
+                font-size: 0.9rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-grid{
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1.5rem;
+            }
+
+            .contact-info,
+            .contact-form {
+                width: 100%;
+            }
+
+            .footer{
+                font-size: 0.9rem;
+            }
+        }
